@@ -10,7 +10,7 @@ This program performs a simple text transformation using the `golang.org/x/text`
 
 ```bash
 # Run the program
-go run cmd/app/main.go
+go run main.go
 ```
 
 ## Vulnerable Dependency

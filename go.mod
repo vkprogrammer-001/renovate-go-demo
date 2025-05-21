@@ -1,4 +1,4 @@
-module renovate-go-demo
+module github.com/vkprogrammer-001/renovate-go-demo
 
 go 1.24.1
 
