@@ -1,40 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:base",
+    ":enableVulnerabilityAlerts"
   ],
   "packageRules": [
     {
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchDepTypes": [
-        "require"
-      ],
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["require"],
       "enabled": false
     },
     {
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchDepTypes": [
-        "require"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor",
-        "major"
-      ],
-      "enabled": true,
-      "vulnerabilityAlerts": {
-        "enabled": true
-      }
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["require"],
+      "vulnerabilityAlerts": true,
+      "enabled": true
     }
   ],
   "vulnerabilityAlerts": {
     "enabled": true,
-    "labels": [
-      "security"
-    ]
-  }
+    "labels": ["security"]
+  },
+  "osvVulnerabilityAlerts": true,
+  "prCreation": "immediate"
 }
